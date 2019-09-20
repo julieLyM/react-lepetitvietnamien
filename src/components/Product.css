@@ -1,0 +1,29 @@
+.card {
+  background-color: white;
+  height: 80%;
+  margin: 10%;
+  width: 80%;
+
+}
+.img-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-img-top {
+  width:50%;
+}
+
+.cart-btn {
+  width: 15%;
+  }
+
+.icon {
+  width:50%;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-around;
+}
