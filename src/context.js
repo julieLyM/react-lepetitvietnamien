@@ -132,7 +132,7 @@ class ProductProvider extends Component {
     )
   }
 
-  cleanCart = () => {
+  clearCart = () => {
     this.setState(() => {
       return { cart: [] }
     },
@@ -174,7 +174,7 @@ class ProductProvider extends Component {
         increment: this.increment,
         decrement: this.decrement,
         removeItem: this.removeItem,
-        cleanCart: this.cleanCart,
+        clearCart: this.clearCart,
       }}
       >
         {this.props.children}
