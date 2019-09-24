@@ -66,4 +66,11 @@ const NavStyle = styled.div`
 .nav-btn {
   height:5%;
 }
+
+  @media screen and (min-width: 200px) and (max-width: 640px) {
+    .nav-page {
+      display:flex;
+      flex-direction: row;
+    }
+  }
 `
