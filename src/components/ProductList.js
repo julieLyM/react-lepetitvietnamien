@@ -1,15 +1,14 @@
 import React from 'react';
 import Title from './Title';
-import { ProductConsumer } from '../context'
+import { ProductConsumer } from '../context';
 import Product from './Product';
+import './ProductList.scss';
+
 export default class ProductList extends React.Component {
-
-
-
   render() {
     return (
       <React.Fragment>
-        <div>
+        <div className="product-bloc">
           <Title name="Restaurant le petit vietnamien" title="" />
           <article class="message">
             <div class="message-body">
@@ -21,7 +20,7 @@ export default class ProductList extends React.Component {
               </p>
             </div>
           </article>
-          <div>
+          <div className="product-grid">
             <ProductConsumer>
               {value => {
                 return value.products.map(product => {

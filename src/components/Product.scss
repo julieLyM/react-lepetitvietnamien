@@ -1,0 +1,52 @@
+.card {
+  border-color:transparent;
+  transition: all 1s linear;
+  height:300px;
+  max-width:400px;
+  display: flex;
+  flex-direction: column;
+  margin: 15px 10px 15px 10px;
+
+    .img-product {
+      height: 200px;
+      width: 200px;
+      margin: 10px auto 11px;
+
+      .fig-link {
+        .img-link {
+          width: 100px;
+        }
+      }
+
+      .cart-btn {
+        border: none;
+        border-radius: 10px;
+        height: 40px;
+        width: 75px;
+        margin: 15px 0 8px 60px;
+
+        .logo-cart {
+          height: 30px;
+          width: 30px;
+        }
+      }
+    }
+
+    .card-footer {
+      background:transparent;
+      border-top:transparent;
+      transition: all 0.5s linear;
+      margin-top: 10px;
+    }
+
+    &:hover{
+    .card {
+      border:0.004rem solid pink;
+      box-shadow: grey 2px ;
+    }
+
+    .card-footer{
+      background:pink;
+    }
+  }
+}
