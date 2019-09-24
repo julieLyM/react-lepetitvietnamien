@@ -19,8 +19,8 @@ export default class Navbar extends React.Component {
                 <Link to="/" className="navbar-item">
                   Produits
                 </Link>
-                <Link to="/menu" className="navbar-item">
-                  Menu
+                <Link to="/contact" className="navbar-item">
+                  Contact
                 </Link>
               </div>
             </div>
@@ -59,6 +59,8 @@ const NavStyle = styled.div`
 
 .nav-page {
   background: white;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .nav-btn {

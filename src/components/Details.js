@@ -1,41 +1,46 @@
-import React, { Component } from 'react'
-import { ProductConsumer } from '../context';
-import { Link } from 'react-router-dom';
+import React, { Component } from 'react';
+import styled from "styled-components";
+import { ProductConsumer } from "../context";
+import { Button } from 'react-bulma-components'
+import { Link } from "react-router-dom";
+import 'react-bulma-components/dist/react-bulma-components.min.css';
 
 export default class Details extends Component {
   render() {
     return (
+      <DetailStyle>
       <ProductConsumer>
         {(value) => {
           const { id, company, img, info, price, title, inCart } = value.detailProduct;
           return (
-            <div>
+            <div className="detail-bloc">
               <div className="detail-title">
-                <h1> {title}</h1>
+                <h1 className="title is-1"> {title}</h1>
               </div>
               <div>
-                <img src={img} className="img-fluid" alt="product" />
+                <img src={img} className="detail-img" alt="product" />
               </div>
               <div className="detail-company">
-                <h4> {title}</h4>
-                <p>made by :</p>
+                <p className="title is-5">made by :</p>
                 <span>{company}</span>
               </div>
               <div className="detail-price">
-                <h5>price :</h5>
-                <span>{price}</span>
+                <h5 className="title is-5">price :</h5>
+                <span>{price} €</span>
               </div>
               <div className="detail-info">
-                <h5>description :</h5>
+                <h5 className="title is-5">description :</h5>
                 <span>{info}</span>
               </div>
+              <div className="detail-bloc-btn">
               <Link to="/">
-                <button>
-                  Back to products
-                  </button>
+                <Button>
+                  Retour
+                  </Button>
               </Link>
-              <button
+              <Button
                 cart
+                color="primary"
                 disabled={inCart ? true : false}
                 onClick={() => {
                   value.addToCart(id);
@@ -44,12 +49,28 @@ export default class Details extends Component {
 
                 }
               >
-                {inCart ? "inCart" : "add to cart"}
-              </button>
+                {inCart ? "Dans le panier" : "Mettre le panier"}
+              </Button>
+              </div>
             </div>
           )
         }}
       </ProductConsumer>
+      </DetailStyle>
     )
   }
 }
+const DetailStyle = styled.div`
+.detail-bloc {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-img {
+  width: 40%;
+}
+.detail-bloc-btn {
+  align-items: center;
+  margin: 10px auto;
+}
+`

@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import styled from "styled-components";
 import {ProductConsumer} from "../context";
-import { Button } from 'react-bulma-components'
 import { Link } from "react-router-dom";
+import { Button } from 'react-bulma-components'
+
+import styled from "styled-components";
 import 'react-bulma-components/dist/react-bulma-components.min.css';
 
 
@@ -34,7 +35,7 @@ export default class Modal extends Component {
                       <Button
                         onClick={() => closeModal()}
                       >
-                        Page produits
+                        Retour
                       </Button>
                       </Link>
                       <Link to="/cart">

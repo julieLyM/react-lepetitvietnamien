@@ -1,27 +1,47 @@
 import React, { Component } from 'react'
+import styled from "styled-components";
+import 'react-bulma-components/dist/react-bulma-components.min.css';
 export default class CartColumn extends Component {
   render() {
     return (
-      <div className="columns">
-        <div className="column">
-          <p>products</p>
+      <CartColumnStyled>
+        <div className="columns column-bloc">
+          <div className="column">
+            <p className="cart-col-title">Produits</p>
+          </div>
+          <div className="column">
+            <p className="cart-col-title">Nom</p>
+          </div>
+          <div className="column">
+            <p className="cart-col-title">Prix</p>
+          </div>
+          <div className="column">
+            <p className="cart-col-title">Quantité</p>
+          </div>
+          <div className="column">
+            <p className="cart-col-title">Enlever</p>
+          </div>
+          <div className="column">
+            <p className="cart-col-title">Total</p>
+          </div>
         </div>
-        <div className="column">
-          <p>name of products</p>
-        </div>
-        <div className="column">
-          <p>price</p>
-        </div>
-        <div className="column">
-          <p>quantity</p>
-        </div>
-        <div className="column">
-          <p>remove</p>
-        </div>
-        <div className="column">
-          <p>Total</p>
-        </div>
-      </div>
+      </CartColumnStyled>
     )
   }
 }
+
+const CartColumnStyled = styled.div`
+.column-bloc {
+  text-transform: uppercase;
+  font-size: 1em;
+  display: flex;
+  margin: 20px auto;
+  width: 80%;
+
+}
+
+.cart-col-title{
+  color: blue;
+  margin: 0;
+}
+`

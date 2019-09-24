@@ -10,15 +10,25 @@ export default class ProductList extends React.Component {
     return (
       <React.Fragment>
         <div>
-          <Title name="presentation des produits du petit vietnamien" title="" />
+          <Title name="Restaurant le petit vietnamien" title="" />
+          <article class="message">
+            <div class="message-body">
+              <p>
+                Bienvenue sur le site du restaurant "Le petit Vietnamien", decouvrez les specialités de la street food
+                franco-vietnamienne dans un décor épuré et chaleureux !
+                Retrouvez les savoureux Bo Bun et les Mi Xao cuisinés par la propriétaire de
+                l'etablissement, Elisia, ainsi que les délicieux bubble tea et les fameux dessert au riz à la banane...
+              </p>
+            </div>
+          </article>
           <div>
             <ProductConsumer>
               {value => {
                 return value.products.map(product => {
                   return <Product
-                            key={product.id}
-                            product={product}
-                          />
+                    key={product.id}
+                    product={product}
+                  />
                 })
               }}
             </ProductConsumer>
