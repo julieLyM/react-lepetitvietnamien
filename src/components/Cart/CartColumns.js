@@ -6,22 +6,22 @@ export default class CartColumn extends Component {
     return (
       <CartColumnStyled>
         <div className="columns column-bloc">
-          <div className="column">
+          <div className="column test">
             <p className="cart-col-title">Produits</p>
           </div>
-          <div className="column">
+          <div className="column test">
             <p className="cart-col-title">Nom</p>
           </div>
-          <div className="column">
+          <div className="column test">
             <p className="cart-col-title">Prix</p>
           </div>
-          <div className="column">
+          <div className="column test">
             <p className="cart-col-title">Quantité</p>
           </div>
-          <div className="column">
+          <div className="column test">
             <p className="cart-col-title">Enlever</p>
           </div>
-          <div className="column">
+          <div className="column test">
             <p className="cart-col-title">Total</p>
           </div>
         </div>
@@ -44,4 +44,10 @@ const CartColumnStyled = styled.div`
   color: blue;
   margin: 0;
 }
+
+  @media screen and (min-width: 200px) and (max-width: 640px) {
+    .test {
+     display: none;
+    }
+  }
 `
