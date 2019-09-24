@@ -2,11 +2,11 @@ import React from 'react'
 
 export default function EmptyCart() {
   return (
-    <div className="container">
-      <div className="row">
+<div className="columns is-mobile">
+      <div className="column">
 
-          <h1>Your cart is empty</h1>
 
+        <p className="title is-2">Your cart is empty</p>
       </div>
     </div>
   )

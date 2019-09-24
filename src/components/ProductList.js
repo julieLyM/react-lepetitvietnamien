@@ -10,7 +10,7 @@ export default class ProductList extends React.Component {
     return (
       <React.Fragment>
         <div>
-          <Title name="our" title="products" />
+          <Title name="presentation des produits du petit vietnamien" title="" />
           <div>
             <ProductConsumer>
               {value => {
