@@ -1,5 +1,4 @@
 import React from 'react'
-import "./CartItem.css"
 
 export default function CartItem({item,value}) {
   const {id, title,img,price,total,count} = item;
@@ -20,7 +19,7 @@ export default function CartItem({item,value}) {
         <img src="img/trash.png" style={{ width: "1rem", height: "1rem" }} alt="icon" className="trash" onClick={() => removeItem(id)} />
       </div>
       <div>
-        <strong> Item total : $ {total}</strong>
+        <strong> Item total :  {total} €</strong>
       </div>
     </div>
   )

@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import { ProductConsumer } from '../context';
 import { Link } from 'react-router-dom';
-import { ButtonContainer } from './Button';
-import "./Detail.css"
 
 export default class Details extends Component {
   render() {
@@ -32,11 +30,11 @@ export default class Details extends Component {
                 <span>{info}</span>
               </div>
               <Link to="/">
-                <ButtonContainer>
+                <button>
                   Back to products
-                  </ButtonContainer>
+                  </button>
               </Link>
-              <ButtonContainer
+              <button
                 cart
                 disabled={inCart ? true : false}
                 onClick={() => {
@@ -47,7 +45,7 @@ export default class Details extends Component {
                 }
               >
                 {inCart ? "inCart" : "add to cart"}
-              </ButtonContainer>
+              </button>
             </div>
           )
         }}

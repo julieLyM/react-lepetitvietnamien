@@ -28,7 +28,7 @@ export default class Navbar extends React.Component {
               <div className="navbar-item">
                 <div className="buttons">
                   <Link to="/cart">
-                    <Button color="primary">
+                    <Button color="primary" className="nav-btn">
                       <figure className="image is-32x32">
                         <img
                           src="img/cart.png"
@@ -37,7 +37,7 @@ export default class Navbar extends React.Component {
                       </figure>
                       <strong>
                         Mon panier
-                  </strong>
+                      </strong>
                     </Button>
                   </Link>
                 </div>
@@ -59,5 +59,9 @@ const NavStyle = styled.div`
 
 .nav-page {
   background: white;
+}
+
+.nav-btn {
+  height:5%;
 }
 `

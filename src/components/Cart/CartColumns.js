@@ -1,26 +1,24 @@
 import React, { Component } from 'react'
-import './CartColumns.css'
-export default class CartColumns extends Component {
+export default class CartColumn extends Component {
   render() {
     return (
-      <div className="container-fluid">
-
-        <div className="cart-columns-text">
+      <div className="columns">
+        <div className="column">
           <p>products</p>
         </div>
-        <div className="cart-columns-text">
+        <div className="column">
           <p>name of products</p>
         </div>
-        <div className="cart-columns-text">
+        <div className="column">
           <p>price</p>
         </div>
-        <div className="cart-columns-text">
+        <div className="column">
           <p>quantity</p>
         </div>
-        <div className="cart-columns-text">
+        <div className="column">
           <p>remove</p>
         </div>
-        <div className="cart-columns-text">
+        <div className="column">
           <p>Total</p>
         </div>
       </div>

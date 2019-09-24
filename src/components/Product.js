@@ -11,49 +11,49 @@ export default class Product extends Component {
     return (
       <ProductWrapper>
           <div className="card">
-          <ProductConsumer>
-            {(value) => (
-            <div
-              className="img-container"
-              onClick={() => value.handleDetail(id)}
-            >
-              <Link to="/details">
-                <figure className="image is-4by3">
-                   <img src={img} className="image-cart"alt="image" />
-                </figure>
-              </Link>
-              <button
-                className="cart-btn"
-                disabled={inCart ? true : false}
-                onClick={() => {
-                  value.addToCart(id);
-                  value.openModal(id);
-                }}
-              >
-                {inCart ? (
-                  <p disabled>
-                    {""}
-                    Dans le panier
-            </p>
-                ) : (
-                    <img src="img/cart.png" className="logo-cart" alt="icon" />
-                  )}
-              </button>
-            </div>)}
-          </ProductConsumer>
-          <footer className="card-footer">
-            <p className="card-footer-item">
-              <span>
-                {title}
+            <ProductConsumer>
+              {(value) => (
+                <div
+                  className="img-container"
+                  onClick={() => value.handleDetail(id)}
+                >
+                  <Link to="/details">
+                    <figure className="image is-4by3">
+                      <img src={img} className="image-cart" alt="image" />
+                    </figure>
+                  </Link>
+                  <button
+                    className="cart-btn"
+                    disabled={inCart ? true : false}
+                    onClick={() => {
+                      value.addToCart(id);
+                      value.openModal(id);
+                    }}
+                  >
+                    {inCart ? (
+                      <p disabled>
+                        {""}
+                        Dans le panier
+                      </p>
+                    ) : (
+                        <img src="img/cart.png" className="logo-cart" alt="icon" />
+                      )}
+                  </button>
+                </div>)}
+            </ProductConsumer>
+            <footer className="card-footer">
+              <p className="card-footer-item">
+                <span>
+                  {title}
+                </span>
+              </p>
+              <p className="card-footer-item">
+                <span>
+                prix : {price} €
               </span>
-            </p>
-            <p className="card-footer-item">
-              <span>
-                prix : {price} euros
-              </span>
-            </p>
-          </footer>
-        </div>
+              </p>
+            </footer>
+          </div>
       </ProductWrapper>
     )
   }
@@ -74,7 +74,7 @@ const ProductWrapper = styled.div`
 .card-footer {
   background:transparent;
   border-top:transparent;
-  transition: all 1s linear;
+  transition: all 0.5s linear;
   margin-top: 10px;
 }
 &:hover{
@@ -103,9 +103,8 @@ const ProductWrapper = styled.div`
     }
 
   .logo-cart {
-    height: 40px;
+    height: 30px;
     width: 30px;
   }
 }
-
 `

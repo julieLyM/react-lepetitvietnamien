@@ -1,8 +1,0 @@
-.container-bloc {
-  display: flex;
-  flex-direction: row;
-  text-transform: uppercase;
-  color: blue;
-  justify-content: space-evenly;
-
-};

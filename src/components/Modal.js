@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import styled from "styled-components";
 import {ProductConsumer} from "../context";
-import { ButtonContainer } from "./Button";
+import { Button } from 'react-bulma-components'
 import { Link } from "react-router-dom";
+import 'react-bulma-components/dist/react-bulma-components.min.css';
+
 
 export default class Modal extends Component {
   render() {
@@ -20,25 +22,31 @@ export default class Modal extends Component {
                 <div className="container">
                   <div className="row">
                     <div id="modal" className="text">
-                      <h5>item on the cart</h5>
-                      <img src={img} alt="product" className="img-fluid"/>
-                      <h5>{title}</h5>
-                      <h5>price : $ {price}</h5>
+                      <h5 className="title is-5">Le produit choisit</h5>
+                      <img src={img} className="modal-img" alt="product" />
+                      <h5>Produit :
+                      <span className="title is-5"> {title}</span></h5>
+                      <h5>Prix :
+                        <span className="title is-5"> {price} €</span>
+                        </h5>
+                      <div className="btn-bloc">
                       <Link to="/">
-                      <ButtonContainer
+                      <Button
                         onClick={() => closeModal()}
                       >
-                        store
-                      </ButtonContainer>
+                        Page produits
+                      </Button>
                       </Link>
                       <Link to="/cart">
-                        <ButtonContainer
+                        <Button
+                          color="primary"
                           cart
                           onClick={() => closeModal()}
                         >
-                          go to cart
-                      </ButtonContainer>
+                          Aller dans le panier
+                      </Button>
                       </Link>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -64,4 +72,14 @@ justify-content: center;
 #modal{
   background-color: white;
 };
+
+.btn-bloc {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.modal-img {
+  width: 30%;
+}
 `
